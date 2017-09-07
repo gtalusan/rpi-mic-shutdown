@@ -1,0 +1,22 @@
+#!/bin/sh
+
+set -e
+
+. /usr/share/debconf/confmodule
+
+case "$1" in
+	configure)
+		systemctl start rpi-mic-shutdown
+		systemctl enable rpi-mic-shutdown
+		;;
+	abort-upgrade|abort-remove|abort-deconfigure)
+		exit 0
+		;;
+	*)
+		exit 1
+		;;
+esac
+
+db_stop
+
+exit 0

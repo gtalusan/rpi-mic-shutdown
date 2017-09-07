@@ -1,0 +1,10 @@
+[Unit]
+Description=rpi-mic-shutdown
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/rpi-mic-shutdown.sh
+ExecStop=/bin/kill -HUP $MAINPID
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,9 @@
+Package: rpi-mic-shutdown
+Section: unknown
+Priority: optional
+Version: 0.1
+Maintainer: george <george.talusan@gmail.com>
+Architecture: armhf
+Depends: wiringpi, systemd
+Description: rpi-mic-shutdown
+ rpi-mic-shutdown
